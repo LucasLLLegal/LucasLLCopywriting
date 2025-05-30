@@ -3,339 +3,211 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lucas López Lago | Copywriting Jurídico & Estratégico</title>
+    <title>Lucas López Lago | Copywriting Jurídico</title>
     <style>
-        :root {
-            --primary: #1a365d;
-            --secondary: #d4af37;
-            --accent: #e63946;
-            --light: #f8f9fa;
-            --dark: #212529;
-        }
         body {
             font-family: 'Georgia', serif;
-            line-height: 1.8;
-            color: var(--dark);
-            max-width: 1200px;
+            line-height: 1.6;
+            color: #333;
+            max-width: 900px;
             margin: 0 auto;
-            padding: 0;
-            background-color: var(--light);
+            padding: 0 20px;
+            background-color: #f8f8f8;
         }
         header {
-            background: linear-gradient(135deg, var(--primary) 0%, #0a2342 100%);
-            color: white;
-            padding: 60px 20px 40px;
             text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-        header::after {
-            content: "";
-            position: absolute;
-            bottom: -50px;
-            left: 0;
-            right: 0;
-            height: 100px;
-            background: var(--light);
-            transform: skewY(-2deg);
-            z-index: 1;
+            margin: 60px 0 40px;
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 30px;
         }
         h1 {
-            margin: 0;
-            font-size: 3em;
-            font-weight: 700;
-            letter-spacing: 1px;
-            position: relative;
-            z-index: 2;
+            font-size: 2.5em;
+            font-weight: normal;
+            color: #222;
+            margin-bottom: 10px;
         }
         .tagline {
-            font-size: 1.4em;
             font-style: italic;
-            opacity: 0.9;
-            margin-top: 10px;
-            position: relative;
-            z-index: 2;
+            color: #666;
+            font-size: 1.2em;
         }
         h2 {
-            color: var(--primary);
-            font-size: 2em;
-            margin-top: 60px;
-            position: relative;
-            display: inline-block;
-        }
-        h2::after {
-            content: "";
-            position: absolute;
-            bottom: -10px;
-            left: 0;
-            width: 70px;
-            height: 4px;
-            background: var(--secondary);
+            font-size: 1.8em;
+            color: #222;
+            margin: 50px 0 20px;
+            font-weight: normal;
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 10px;
         }
         .intro {
-            font-size: 1.2em;
-            max-width: 800px;
-            margin: 40px auto;
+            font-size: 1.1em;
             text-align: center;
-            padding: 0 20px;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            color: #444;
         }
         .services {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
-            margin: 60px 20px;
+            margin: 40px 0;
         }
-        .service-card {
+        .service {
             background: white;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-            transition: transform 0.3s ease;
-        }
-        .service-card:hover {
-            transform: translateY(-10px);
-        }
-        .service-header {
-            background: var(--primary);
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        .service-body {
             padding: 25px;
+            border-radius: 3px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
-        .service-body ul {
-            list-style-type: none;
-            padding: 0;
+        .service h3 {
+            color: #8b5a2b; /* Café profesional */
+            margin-top: 0;
+            font-size: 1.3em;
         }
-        .service-body li {
-            margin-bottom: 12px;
-            position: relative;
-            padding-left: 25px;
+        ul {
+            padding-left: 20px;
         }
-        .service-body li::before {
-            content: "•";
-            color: var(--secondary);
-            font-size: 1.5em;
-            position: absolute;
-            left: 0;
-            top: -3px;
+        li {
+            margin-bottom: 10px;
         }
-        .usp-section {
+        .usp {
             background: white;
-            padding: 60px 20px;
-            margin: 80px 0;
-            position: relative;
+            padding: 40px;
+            margin: 50px 0;
+            border-top: 1px solid #e0e0e0;
+            border-bottom: 1px solid #e0e0e0;
         }
-        .usp-container {
-            max-width: 1000px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
+        .usp-item {
+            margin-bottom: 25px;
         }
-        .usp-card {
-            text-align: center;
-            padding: 20px;
-        }
-        .usp-icon {
-            font-size: 3em;
-            color: var(--secondary);
-            margin-bottom: 20px;
+        .usp-item h3 {
+            color: #555;
+            margin-bottom: 10px;
+            font-size: 1.2em;
         }
         .languages {
             display: flex;
             justify-content: center;
-            flex-wrap: wrap;
             gap: 30px;
             margin: 40px 0;
+            flex-wrap: wrap;
         }
-        .language-card {
-            background: white;
-            border-radius: 50%;
-            width: 120px;
-            height: 120px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: all 0.3s ease;
-        }
-        .language-card:hover {
-            transform: scale(1.1);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-        }
-        .language-name {
-            font-weight: bold;
-            font-size: 1.2em;
-            margin-bottom: 5px;
-        }
-        .language-level {
-            font-size: 0.9em;
-            color: var(--secondary);
-        }
-        .cta-section {
-            background: linear-gradient(135deg, var(--primary) 0%, #0a2342 100%);
-            color: white;
+        .language {
             text-align: center;
-            padding: 80px 20px;
-            margin-top: 80px;
-            position: relative;
         }
-        .cta-content {
-            max-width: 700px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 2;
+        .language strong {
+            display: block;
+            color: #222;
         }
-        .cta-button {
+        .cta {
+            text-align: center;
+            margin: 60px 0;
+        }
+        .cta a {
             display: inline-block;
-            background: var(--secondary);
-            color: var(--primary);
-            padding: 15px 40px;
-            border-radius: 50px;
-            font-weight: bold;
+            background: #222;
+            color: white;
+            padding: 12px 30px;
             text-decoration: none;
-            margin-top: 30px;
-            transition: all 0.3s ease;
-            border: 2px solid var(--secondary);
+            border-radius: 3px;
+            font-size: 1.1em;
+            transition: background 0.3s;
         }
-        .cta-button:hover {
-            background: transparent;
-            color: var(--secondary);
+        .cta a:hover {
+            background: #444;
         }
         footer {
-            background: var(--dark);
-            color: white;
             text-align: center;
-            padding: 30px 20px;
+            margin: 80px 0 40px;
+            color: #666;
             font-size: 0.9em;
-        }
-        .signature {
-            font-family: 'Brush Script MT', cursive;
-            font-size: 1.8em;
-            color: var(--secondary);
-            margin-top: 10px;
         }
     </style>
 </head>
 <body>
     <header>
         <h1>Lucas López Lago</h1>
-        <div class="tagline">Precisión jurídica meets persuasión creativa</div>
+        <div class="tagline">Copywriting jurídico y redacción profesional</div>
     </header>
 
-    <section style="padding: 0 20px;">
-        <div class="intro">
-            <p>Como <strong>abogado especializado en propiedad intelectual</strong> y <strong>redactor profesional multilingüe</strong>, transformo conceptos jurídicos complejos en mensajes claros, convincentes y estratégicamente diseñados para conectar con tu audiencia.</p>
-        </div>
+    <div class="intro">
+        <p>Abogado especializado en propiedad intelectual y redactor multilingüe. Combino rigor jurídico con claridad comunicativa para crear contenido preciso y persuasivo.</p>
+    </div>
 
-        <h2 style="margin-left: 20px;">Servicios Exclusivos</h2>
-        <div class="services">
-            <div class="service-card">
-                <div class="service-header">
-                    <h3>Copywriting Jurídico</h3>
-                </div>
-                <div class="service-body">
-                    <ul>
-                        <li>Artículos especializados para blogs y revistas legales</li>
-                        <li>White papers y guías técnicas para despachos</li>
-                        <li>Contenido web optimizado para SEO jurídico</li>
-                        <li>Newsletters con análisis legislativos</li>
-                        <li>Discursos y presentaciones para eventos legales</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="service-card">
-                <div class="service-header">
-                    <h3>Estrategias de Contenido</h3>
-                </div>
-                <div class="service-body">
-                    <ul>
-                        <li>Branding narrativo para firmas legales</li>
-                        <li>Posicionamiento de expertos (thought leadership)</li>
-                        <li>Desarrollo de tono de voz corporativo</li>
-                        <li>Content marketing para el sector legal</li>
-                        <li>Storytelling para casos de éxito</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="service-card">
-                <div class="service-header">
-                    <h3>Traducción Jurídica</h3>
-                </div>
-                <div class="service-body">
-                    <ul>
-                        <li>Localización de contratos y documentos legales</li>
-                        <li>Adaptación cultural de contenido multilingüe</li>
-                        <li>Transcreación de textos publicitarios</li>
-                        <li>Revisión y edición de traducciones</li>
-                        <li>Interpretación de matices jurídicos entre idiomas</li>
-                    </ul>
-                </div>
-            </div>
+    <h2>Servicios</h2>
+    <div class="services">
+        <div class="service">
+            <h3>Redacción Jurídica</h3>
+            <ul>
+                <li>Artículos y análisis legales</li>
+                <li>Contenido web para despachos</li>
+                <li>Guías y manuales técnicos</li>
+                <li>Actualizaciones legislativas</li>
+            </ul>
         </div>
-    </section>
-
-    <div class="usp-section">
-        <div class="usp-container">
-            <div class="usp-card">
-                <div class="usp-icon">⚖️</div>
-                <h3>Expertise Jurídico</h3>
-                <p>Más que redactor: abogado en ejercicio con especialización en Propiedad Intelectual y Compliance. Tu contenido tendrá precisión técnica impecable.</p>
-            </div>
-            <div class="usp-card">
-                <div class="usp-icon">🌍</div>
-                <h3>Alcance Global</h3>
-                <p>Contenido que trasciende fronteras con servicios en 4 idiomas (ES/EN/FR/IT). Perfecto para firmas con clientela internacional.</p>
-            </div>
-            <div class="usp-card">
-                <div class="usp-icon">✍️</div>
-                <h3>Estilo Distinguido</h3>
-                <p>Formación en escritura audiovisual y comunicación profesional. Textos con elegancia, claridad y poder persuasivo.</p>
-            </div>
+        <div class="service">
+            <h3>Copywriting Profesional</h3>
+            <ul>
+                <li>Textos corporativos</li>
+                <li>Contenido para redes sociales</li>
+                <li>Presentaciones ejecutivas</li>
+                <li>Landing pages</li>
+            </ul>
+        </div>
+        <div class="service">
+            <h3>Traducción Especializada</h3>
+            <ul>
+                <li>Documentos jurídicos</li>
+                <li>Contenido comercial</li>
+                <li>Revisión y edición</li>
+                <li>Localización cultural</li>
+            </ul>
         </div>
     </div>
 
-    <section style="text-align: center; padding: 0 20px;">
-        <h2>Idiomas de Trabajo</h2>
-        <p>Contenido jurídico y comercial adaptado a mercados internacionales:</p>
-        <div class="languages">
-            <div class="language-card">
-                <div class="language-name">Español</div>
-                <div class="language-level">Nativo</div>
-            </div>
-            <div class="language-card">
-                <div class="language-name">English</div>
-                <div class="language-level">C1</div>
-            </div>
-            <div class="language-card">
-                <div class="language-name">Français</div>
-                <div class="language-level">B2</div>
-            </div>
-            <div class="language-card">
-                <div class="language-name">Italiano</div>
-                <div class="language-level">B2</div>
-            </div>
+    <div class="usp">
+        <h2>Valor Añadido</h2>
+        <div class="usp-item">
+            <h3>Conocimiento Técnico</h3>
+            <p>Más de 3 años de experiencia en derecho de propiedad intelectual y compliance, garantizando contenido jurídicamente preciso.</p>
         </div>
-    </section>
+        <div class="usp-item">
+            <h3>Multilingüismo</h3>
+            <p>Servicios en español, inglés, francés e italiano, con comprensión de matices culturales y legales en cada idioma.</p>
+        </div>
+        <div class="usp-item">
+            <h3>Enfoque Estratégico</h3>
+            <p>Contenido diseñado para posicionar tu marca, educar a tu audiencia y generar confianza profesional.</p>
+        </div>
+    </div>
 
-    <div class="cta-section">
-        <div class="cta-content">
-            <h2 style="color: white; margin-top: 0;">¿Listo para Elevar tu Comunicación Legal?</h2>
-            <p>Ya sea que necesites posicionar tu despacho, educar a clientes o expandirte a nuevos mercados, crearé la estrategia de contenido perfecta para tus objetivos.</p>
-            <a href="mailto:lucaslopezlago3@gmail.com" class="cta-button">Solicitar Consultoría Gratuita</a>
+    <h2>Idiomas</h2>
+    <div class="languages">
+        <div class="language">
+            <strong>Español</strong>
+            <span>Nativo</span>
         </div>
+        <div class="language">
+            <strong>Inglés</strong>
+            <span>C1</span>
+        </div>
+        <div class="language">
+            <strong>Francés</strong>
+            <span>B2</span>
+        </div>
+        <div class="language">
+            <strong>Italiano</strong>
+            <span>B2</span>
+        </div>
+    </div>
+
+    <div class="cta">
+        <a href="mailto:lucaslopezlago3@gmail.com">Contactar</a>
     </div>
 
     <footer>
-        <p>Contáctame para proyectos de copywriting jurídico, estrategias de contenido o traducciones especializadas</p>
+        <p>Lucas López Lago</p>
         <p>Teléfono: 669 338 414 | Email: lucaslopezlago3@gmail.com</p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/lucas-l%C3%B3pez-lago-9b3659232/" style="color: var(--secondary);">Lucas López Lago</a></p>
-        <div class="signature">Lucas López Lago</div>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/lucas-l%C3%B3pez-lago-9b3659232/" style="color: #8b5a2b;">Perfil profesional</a></p>
     </footer>
 </body>
 </html>
